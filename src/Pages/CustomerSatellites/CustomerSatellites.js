@@ -35,6 +35,12 @@ function CustomerSatellites() {
                 p2={item.launcher}
                 p3={`${item.mass} Kg`}
                 p4={item.launch_date}
+                onClickFunction={() =>
+                  window.open(
+                    `https://www.google.com/search?q=isro%20satellite%20${item.id}`,
+                    "_blank"
+                  )
+                }
               />
             );
           })}

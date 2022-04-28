@@ -26,7 +26,18 @@ function Launchers() {
       {launchersList.length > 1 ? (
         <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           {launchersList.map((item) => {
-            return <InfoCard key={item.id} title={item.id} />;
+            return (
+              <InfoCard
+                key={item.id}
+                title={item.id}
+                onClickFunction={() =>
+                  window.open(
+                    `https://www.google.com/search?q=isro%20launcher%20${item.id}`,
+                    "_blank"
+                  )
+                }
+              />
+            );
           })}
         </div>
       ) : (

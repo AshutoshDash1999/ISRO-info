@@ -30,6 +30,12 @@ function Centers() {
                 title={item.name}
                 p3={`${item.Place},`}
                 p4={item.State}
+                onClickFunction={() =>
+                  window.open(
+                    `https://www.google.com/search?q=isro%20center%20${item.name}`,
+                    "_blank"
+                  )
+                }
               />
             );
           })}
